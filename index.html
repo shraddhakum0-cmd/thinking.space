@@ -3,207 +3,207 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Macnezz Café</title>
+<title>Luxury Hub</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
-body{font-family:'Poppins',sans-serif;background:#FFF8E1;color:#3E2723;}
+body{margin:0;font-family:Poppins;background:#0f0f0f;color:white;}
 
-.navbar{
-position:fixed;width:100%;top:0;display:flex;justify-content:space-between;
-align-items:center;padding:20px 40px;z-index:1000;
-background:transparent;transition:0.3s;
+nav{
+display:flex;justify-content:space-between;padding:15px 30px;
+background:#111;position:fixed;width:100%;top:0;z-index:1000;
 }
-.navbar.scrolled{background:#3E2723;}
-.logo{font-family:'Playfair Display';font-size:26px;color:#D4AF37;}
-.nav-links{display:flex;gap:25px;}
-.nav-links a{color:white;text-decoration:none;font-size:14px;}
-.menu-toggle{display:none;color:white;font-size:24px;}
+nav h2{color:#ffd700;}
+nav a{color:white;text-decoration:none;margin:0 10px;}
 
 .hero{
 height:100vh;
-background:url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-display:flex;justify-content:center;align-items:center;text-align:center;position:relative;
-}
-.hero::after{
-content:"";position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.6);
-}
-.hero-content{position:relative;color:white;}
-.hero h1{font-family:'Playfair Display';font-size:55px;}
-.btn{
-background:#D4AF37;border:none;padding:12px 25px;border-radius:30px;
-cursor:pointer;margin-top:20px;font-weight:500;
+background:url("https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=1920") center/cover no-repeat;
+display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
 }
 
-section{padding:90px 40px;}
+section{padding:100px 20px;}
 
-.menu-grid{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
+
 .card{
-background:white;border-radius:18px;overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,0.15);
-transition:0.3s;
+background:#1c1c1c;border-radius:15px;overflow:hidden;transition:0.3s;
 }
-.card:hover{transform:translateY(-8px);}
+.card:hover{transform:scale(1.05);}
+
 .card img{width:100%;height:200px;object-fit:cover;}
+
 .card-content{padding:15px;}
-.card h3{margin-bottom:5px;}
-.card button{margin-top:10px;}
 
-.gallery{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;
-}
-.gallery img{
-width:100%;border-radius:15px;transition:0.4s;
-}
-.gallery img:hover{transform:scale(1.08);}
-
-.form input,.form button{
-width:100%;padding:12px;margin:10px 0;border-radius:12px;border:1px solid #ccc;
+button{
+background:#ffd700;border:none;padding:8px 15px;border-radius:20px;cursor:pointer;
 }
 
-.footer{
-background:#3E2723;color:white;text-align:center;padding:25px;
+/* Confession */
+.confession-box textarea{
+width:100%;height:100px;border-radius:10px;border:none;padding:10px;
 }
 
-.whatsapp{
-position:fixed;bottom:25px;right:25px;background:#25D366;color:white;
-padding:15px;border-radius:50%;font-size:20px;text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
+/* AI */
+.ai-box{
+background:#1c1c1c;padding:15px;border-radius:10px;
 }
-
-.top-btn{
-position:fixed;bottom:25px;left:25px;background:#D4AF37;
-padding:10px;border-radius:50%;cursor:pointer;
-}
-
-@media(max-width:768px){
-.nav-links{display:none;flex-direction:column;background:#3E2723;position:absolute;top:70px;right:0;padding:20px;}
-.nav-links.active{display:flex;}
-.menu-toggle{display:block;}
-.hero h1{font-size:35px;}
+.ai-box input{
+width:100%;padding:10px;border-radius:20px;border:none;margin-top:10px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="navbar" id="navbar">
-<div class="logo">Macnezz Café</div>
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-<div class="nav-links" id="navLinks">
-<a href="#home">Home</a>
-<a href="#menu">Menu</a>
-<a href="#gallery">Gallery</a>
-<a href="#booking">Booking</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+<nav>
+<h2>Luxury Hub</h2>
+<div>
+<a href="#anime">Anime</a>
+<a href="#games">Games</a>
+<a href="#movies">Movies</a>
+<a href="#confession">Confession</a>
+<a href="#ai">AI</a>
 </div>
+</nav>
+
+<div class="hero">
+<h1>Welcome to Luxury Hub</h1>
+<p>Entertainment + Confession + AI</p>
 </div>
 
-<section class="hero" id="home">
-<div class="hero-content">
-<h1>Welcome to Macnezz Café</h1>
-<p>Sip. Relax. Repeat.</p>
-<button class="btn" onclick="scrollToSection('menu')">Explore Menu</button>
-</div>
+<!-- ANIME -->
+<section id="anime">
+<h2>Anime</h2>
+<div class="grid" id="animeList"></div>
 </section>
 
-<section id="menu">
-<h2>Our Premium Menu</h2>
-<div class="menu-grid">
+<!-- GAMES -->
+<section id="games">
+<h2>Games</h2>
+<div class="grid">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1611996575749-79a3a250f948?auto=format&fit=crop&w=800">
 <div class="card-content">
-<h3>Cappuccino</h3><p>₹120</p>
-<p>Rich espresso with creamy foam.</p>
-<a href="https://wa.me/919891107011?text=Hi I want to order Cappuccino from Macnezz Café">
-<button class="btn">Order</button></a>
-</div></div>
+<h3>Chess</h3>
+<p>2M+ players</p>
+<button>Play</button>
+</div>
+</div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&w=800">
 <div class="card-content">
-<h3>Mocha</h3><p>₹150</p>
-<p>Chocolate infused coffee delight.</p>
-<a href="https://wa.me/919891107011?text=Hi I want to order Mocha from Macnezz Café">
-<button class="btn">Order</button></a>
-</div></div>
+<h3>Ludo</h3>
+<p>5M+ players</p>
+<button>Play</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- MOVIES -->
+<section id="movies">
+<h2>Movies</h2>
+<div class="grid">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=800">
 <div class="card-content">
-<h3>Brownie</h3><p>₹160</p>
-<p>Warm chocolate brownie with fudge.</p>
-<a href="#"><button class="btn">Order</button></a>
-</div></div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80">
-<div class="card-content">
-<h3>Pizza</h3><p>₹220</p>
-<p>Cheesy delight with fresh toppings.</p>
-<a href="#"><button class="btn">Order</button></a>
-</div></div>
+<h3>Latest Movie</h3>
+<p>2025</p>
+<button>Watch</button>
+</div>
+</div>
 
 </div>
 </section>
 
-<section id="gallery">
-<h2>Our Ambience</h2>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80">
-<img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=80">
-<img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80">
+<!-- CONFESSION -->
+<section id="confession">
+<h2>Confession Zone 😈</h2>
+
+<div class="confession-box">
+<textarea placeholder="Apna confession likho..."></textarea>
+<br><br>
+<button onclick="sendConfession()">Send</button>
+
+<p style="margin-top:15px;color:#aaa;">
+📩 DM on Instagram: 
+<a href="https://instagram.com/yourr.akuma_.09" target="_blank" style="color:#ffd700;">
+<b>@yourr.akuma_.09</b>
+</a>
+</p>
+
+<br>
+
+<a href="https://instagram.com/yourr.akuma_.09" target="_blank">
+<button>Send Confession on Instagram</button>
+</a>
+
 </div>
 </section>
 
-<section id="booking">
-<h2>Book a Table</h2>
-<div class="form">
-<input type="text" id="date" placeholder="Select Date">
-<input type="text" id="time" placeholder="Select Time">
-<button onclick="book()">Book via WhatsApp</button>
-</div>
-</section>
+<!-- AI -->
+<section id="ai">
+<h2>AI Chat 🤖</h2>
 
-<section id="about">
-<h2>About Us</h2>
-<p>Macnezz Café offers a luxurious and cozy environment where every sip feels special. Perfect for relaxing, working, or meeting friends.</p>
-</section>
-
-<section id="contact">
-<h2>Contact</h2>
-<p>WhatsApp: +919891107011</p>
-<p><a href="https://instagram.com/your.akuma_.09">Instagram</a></p>
-<p>Open: 10 AM – 11 PM</p>
-</section>
-
-<div class="footer">
-<p>© 2026 Macnezz Café</p>
+<div class="ai-box">
+<div id="chatBox"></div>
+<input type="text" placeholder="AI se baat karo..." onkeypress="handleChat(event)">
 </div>
 
-<a class="whatsapp" href="https://wa.me/919891107011">💬</a>
-<div class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆</div>
+</section>
 
 <script>
-function toggleMenu(){
-document.getElementById("navLinks").classList.toggle("active");
-}
-function scrollToSection(id){
-document.getElementById(id).scrollIntoView({behavior:'smooth'});
-}
-window.addEventListener("scroll",()=>{
-document.getElementById("navbar").classList.toggle("scrolled",window.scrollY>50);
+const animeData=[
+{name:"Naruto",img:"https://cdn.myanimelist.net/images/anime/13/17405.jpg"},
+{name:"Attack on Titan",img:"https://cdn.myanimelist.net/images/anime/10/47347.jpg"},
+{name:"Demon Slayer",img:"https://cdn.myanimelist.net/images/anime/1286/99889.jpg"}
+];
+
+function loadAnime(){
+let html="";
+animeData.forEach(a=>{
+html+=`
+<div class="card">
+<img src="${a.img}">
+<div class="card-content">
+<h3>${a.name}</h3>
+<button>Watch</button>
+</div>
+</div>`;
 });
-function book(){
-let date=document.getElementById("date").value;
-let time=document.getElementById("time").value;
-window.open(`https://wa.me/919891107011?text=Hi I want to book a table at Macnezz Café on ${date} at ${time}`);
+document.getElementById("animeList").innerHTML=html;
+}
+loadAnime();
+
+function sendConfession(){
+alert("Confession sent 😈 (demo)");
+}
+
+function handleChat(e){
+if(e.key==="Enter"){
+let input=e.target.value;
+let chatBox=document.getElementById("chatBox");
+
+chatBox.innerHTML+=`<p><b>You:</b> ${input}</p>`;
+
+let reply="Hmm interesting 👀";
+if(input.toLowerCase().includes("hi")) reply="Hello 😄";
+if(input.toLowerCase().includes("sad")) reply="Don't worry ❤️";
+
+chatBox.innerHTML+=`<p><b>AI:</b> ${reply}</p>`;
+
+e.target.value="";
+}
 }
 </script>
 
